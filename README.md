@@ -6,7 +6,7 @@ The chatbot allows users to explore the Zomato menu, place food orders, and have
 ---
 
 ##  Features
-- Interactive **chat-based food ordering system** 🥘  
+- Interactive **chat-based food ordering system**  
 - Powered by **Mistral-7B Instruct (GGUF)** running locally  
 - Integrated with **LangChain** for prompt management and context handling  
 - UI built using **Chainlit** for a smooth web app experience  
@@ -28,26 +28,34 @@ The chatbot allows users to explore the Zomato menu, place food orders, and have
 
 LLMs_App_with_Chainlit/
 │── app.py # Main entry for Chainlit app
+
 │── src/
+
 │ ├── llm.py # Mistral model integration
+
 │ ├── prompt.py # System prompt & Zomato menu
+
 │── models/
+
 │ └── mistral-7b-instruct-v0.2.Q4_K_M.gguf # Local GGUF model
+
 │── chainlitdemo/ # Virtual environment
+
 │── README.md # Documentation
 
-> Create & activate virtual environment
+## Create & activate virtual environment
 
 python -m venv chainlitdemo
 source chainlitdemo/Scripts/activate   # Windows
-# or
+> or
+
 source chainlitdemo/bin/activate       # Mac/Linux
 
-3. Install dependencies
+> Install dependencies
+
 pip install -r requirements.txt
 
-
-> Minimal requirements.txt:
+## Minimal requirements.txt:
 
 chainlit
 langchain
@@ -55,7 +63,7 @@ llama-cpp-python
 transformers
 huggingface-hub
 
-> Model Added
+## Model Added
 
 Download Mistral GGUF from Hugging Face and place it in models/:
 Mistral GGUF Models
@@ -64,15 +72,14 @@ Example:
 
 models/mistral-7b-instruct-v0.2.Q4_K_M.gguf
 
-> Run the chatbot
+## Run the chatbot
 
 chainlit run app.py -w
 
 
-Now open -> http://localhost:8000
- to chat with Zomato Bot!
+Now open -> http://localhost:8000 to chat with Zomato Bot!
 
-> Example System Prompt (src/prompt.py)
+## Example System Prompt (src/prompt.py)
 
 system_instruction = """
 You are Zomato AI Bot 🍴.
@@ -90,11 +97,11 @@ ZOMATO MENU:
 5.  Desserts - Chocolate Brownie (₹99), Ice Cream (₹79)
 """
 
-> Screenshots
+## Screenshots
 
 ![Preview](assets/)
 
-> Future Enhancements
+## Future Enhancements
 
 Integrate with live Zomato API for real-time restaurant data
 
@@ -102,11 +109,11 @@ Add payment gateway integration
 
 Add speech-to-text for voice ordering
 
-> Contributing
+## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first.
 
-> License
+## License
 
 MIT License
 
